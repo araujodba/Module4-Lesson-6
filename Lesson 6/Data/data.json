@@ -1,0 +1,32 @@
+[
+{
+    "name":"Inigo Montoya",
+    "address":"555 Youkilledmyfather Street",
+    "company":"CodeWithCris",
+    "yearsOfExperience":35
+},
+{
+    "name":"Edna Mode",
+    "address":"123 Nocape Lane",
+    "company":"CodeWithCris",
+    "yearsOfExperience":35
+},
+{
+    "name":"Travis Bickle",
+    "address":"99 Youtalkingtome Road",
+    "company":"CodeWithCris",
+    "yearsOfExperience":99
+},
+{
+    "name":"Waltr Sobchak",
+    "address":"8 Dude Place",
+    "company":"CodeWithCris",
+    "yearsOfExperience":23
+},
+{
+    "name":"Julius Winnfield",
+    "address":"25 Ezekiel Ave",
+    "company":"CodeWithCris",
+    "yearsOfExperience":17
+}
+]
