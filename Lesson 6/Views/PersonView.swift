@@ -8,16 +8,27 @@
 import SwiftUI
 
 struct PersonView: View {
-    var model = PersonModel()
+    
+    @State var model = PersonModel()
+    @State var preference = UserPreference()
     var body: some View {
         
         NavigationView {
+            
             List(model.persons!) { item in
                     VStack(alignment: .leading) {
-                                Text("Name: \(item.name)")
-                                Text("Address: \(item.address)")
-                                Text("Company: \(item.company)")
-                                Text("Years of Experience: \(item.yearsOfExperience)")
+                        //Toggle(isOn: $preference.tgName) {
+                            Text("Name: \(item.name)")
+                        //}
+                        //Toggle(isOn: preference.tgAddress) {
+                            Text("Address: \(item.address)")
+                        //}
+                        //Toggle(isOn: preference.tgCompany) {
+                            Text("Company: \(item.company)")
+                        //}
+                        //Toggle(isOn: preference.tgYearsOfExperience) {
+                            Text("Years of Experience: \(item.yearsOfExperience)")
+                        //}     
                     }
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {

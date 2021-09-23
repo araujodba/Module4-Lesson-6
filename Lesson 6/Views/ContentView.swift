@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var indexTab = 1
+    
     @EnvironmentObject var model:PersonModel
+    @EnvironmentObject var preference:UserPreferenceModel
     
     var body: some View {
+        
         TabView {
             
             PersonView()
