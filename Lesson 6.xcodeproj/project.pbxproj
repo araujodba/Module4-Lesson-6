@@ -18,7 +18,6 @@
 		973D91DE26FC2B9200787545 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973D91DD26FC2B9200787545 /* PreferencesView.swift */; };
 		973D91E126FC2C4900787545 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973D91E026FC2C4900787545 /* PersonModel.swift */; };
 		978927E926FCD66D00E437BF /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978927E826FCD66D00E437BF /* UserPreference.swift */; };
-		978927EC26FCEC0000E437BF /* UserPreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978927EB26FCEC0000E437BF /* UserPreferenceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 		973D91DD26FC2B9200787545 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		973D91E026FC2C4900787545 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		978927E826FCD66D00E437BF /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
-		978927EB26FCEC0000E437BF /* UserPreferenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +65,8 @@
 		973D91C026FC24B400787545 /* Lesson 6 */ = {
 			isa = PBXGroup;
 			children = (
-				973D91DF26FC2C2000787545 /* Views */,
 				973D91C126FC24B400787545 /* Lesson_6App.swift */,
+				973D91DF26FC2C2000787545 /* Views */,
 				973D91D826FC29CC00787545 /* Services */,
 				973D91D726FC299A00787545 /* ViewModels */,
 				973D91D426FC28A400787545 /* Models */,
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				973D91E026FC2C4900787545 /* PersonModel.swift */,
-				978927EB26FCEC0000E437BF /* UserPreferenceModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -202,7 +199,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				978927EC26FCEC0000E437BF /* UserPreferenceModel.swift in Sources */,
 				973D91DC26FC2B7500787545 /* PersonView.swift in Sources */,
 				973D91E126FC2C4900787545 /* PersonModel.swift in Sources */,
 				978927E926FCD66D00E437BF /* UserPreference.swift in Sources */,

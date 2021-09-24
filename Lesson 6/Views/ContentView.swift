@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @EnvironmentObject var model:PersonModel
-    @EnvironmentObject var preference:UserPreferenceModel
-    
+    @EnvironmentObject var userPreference:UserPreference
     var body: some View {
         
         TabView {
@@ -21,6 +18,7 @@ struct ContentView: View {
                     Image(systemName: "person.2")
                 }).tag(1)
             
+                
             PreferencesView()
                 .tabItem({
                     Image(systemName: "gearshape")
@@ -33,6 +31,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserPreference())
     }
 }

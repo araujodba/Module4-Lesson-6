@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserPreference: Identifiable, ObservableObject {
+class UserPreference: ObservableObject {
     var id:UUID = UUID()
     @Published var tgName: Bool = true
     @Published var tgAddress: Bool = true

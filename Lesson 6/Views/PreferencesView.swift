@@ -9,18 +9,19 @@ import SwiftUI
 
 struct PreferencesView: View {
     
-    @State var userPreferenceModel:UserPreferenceModel = UserPreferenceModel()
+    @EnvironmentObject var userPreference:UserPreference
     
     var body: some View {
+        
         NavigationView {
             VStack(alignment: .leading) {
 
-                Toggle("Show Name:", isOn: $userPreferenceModel.userPreference.tgName)
-                Toggle("Show address:", isOn: $userPreferenceModel.userPreference.tgAddress)
-                Toggle("Show company:", isOn: $userPreferenceModel.userPreference.tgCompany)
-                Toggle("Show years of experience:", isOn: $userPreferenceModel.userPreference.tgYearsOfExperience)
+                Toggle("Show Name:", isOn: $userPreference.tgName)
+                Toggle("Show address:", isOn: $userPreference.tgAddress)
+                Toggle("Show company:", isOn: $userPreference.tgCompany)
+                Toggle("Show years of experience:", isOn: $userPreference.tgYearsOfExperience)
                 
-            }
+            }.environmentObject(userPreference)
             .font(Font.title.weight(.medium))
             .padding(.horizontal, 30)
             .navigationBarTitleDisplayMode(.inline)
@@ -40,6 +41,6 @@ struct PreferencesView: View {
 
 struct PreferencesView_Previews: PreviewProvider {
     static var previews: some View {
-        PreferencesView()
+        PreferencesView().environmentObject(UserPreference())
     }
 }

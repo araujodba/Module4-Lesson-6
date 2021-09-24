@@ -10,25 +10,27 @@ import SwiftUI
 struct PersonView: View {
     
     @State var model = PersonModel()
-    @State var preference = UserPreference()
+    //@StateObject var preference
+    @EnvironmentObject var userPreference:UserPreference
+    
     var body: some View {
         
         NavigationView {
             
             List(model.persons!) { item in
                     VStack(alignment: .leading) {
-                        //Toggle(isOn: $preference.tgName) {
+                        if (userPreference.tgName) {
                             Text("Name: \(item.name)")
-                        //}
-                        //Toggle(isOn: preference.tgAddress) {
+                        }
+                        if (userPreference.tgAddress) {
                             Text("Address: \(item.address)")
-                        //}
-                        //Toggle(isOn: preference.tgCompany) {
+                        }
+                        if (userPreference.tgCompany) {
                             Text("Company: \(item.company)")
-                        //}
-                        //Toggle(isOn: preference.tgYearsOfExperience) {
+                        }
+                        if (userPreference.tgYearsOfExperience) {
                             Text("Years of Experience: \(item.yearsOfExperience)")
-                        //}     
+                        }
                     }
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
@@ -46,6 +48,6 @@ struct PersonView: View {
 
 struct PersonView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonView()
+        PersonView().environmentObject(UserPreference())
     }
 }

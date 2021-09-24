@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Person: Identifiable, Decodable {
+class Person: Identifiable, Decodable, ObservableObject {
     var id:UUID?
     var name: String
     var address: String

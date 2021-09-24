@@ -7,11 +7,11 @@
 
 import Foundation
 
-class PersonModel: ObservableObject {
-    @Published var persons: [Person]? = [Person]()
+class PersonModel: Identifiable, Decodable {
+    var persons: [Person]? = [Person]()
     
     init() {
-        persons = DataService.getDataLoad()
-        //print(persons)
+        persons = DataService.getDataLoad()        
+        //setting initial preference settigs
     }
 }
